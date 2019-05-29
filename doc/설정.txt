@@ -1,0 +1,42 @@
+1. Maven Project 생성
+2. POM 설정
+3. web.xml 설정
+	종속되는 것을 생각해서 scan
+	controller <- Service <- Repository <- SQLSession
+
+4. AppConfig 설정
+	|--- DBConfig : DataSource
+	|		|--- jdbc.properties : DBConfig의 DB ID/PW
+	|
+	|--- MybatisConfig : sqlSession, sqlSessionFactory
+
+5. WebConfig
+	|--- MVCConfig
+	|--- SecurityConfig : 인터셉터
+	|--- MessageConfig : MeseageSource 한거
+	|--- FileUploadConfig
+
+6. GlobalExceptionHandler
+
+7. slf4j, Logback
+
+/WEB-INF
+	|--- /classes [src/main/java, src/main/resource, src/test/java, src/test/resource] 들이 컴파일해서 들어오는 곳
+			|--- /com
+					|--- /cafe24
+							|--- /mysite
+							|		|--- /config
+							|				|--- AppConfig
+							|				|--- WebConfig
+							|
+							|--- /config	=> 공통적으로 쓸 수 있는 설정, 기반, 다른 패키지에서 땡겨 씀
+									|--- /app
+									|		|--- DBConfig
+									|		|--- MybatisConfig
+									|		|--- /mybatis
+									|		|		|--- configuration.xml
+									|		|		|--- /mappers
+									|		|		|		|--- user.xml
+									|		|		|		|--- ...
+									|
+									|--- /web	: MVC에 관련된 것
