@@ -38,5 +38,14 @@
 									|		|		|--- /mappers
 									|		|		|		|--- user.xml
 									|		|		|		|--- ...
-									|
+									|		|--- properties
+									|				|--- jdbc.properties
 									|--- /web	: MVC에 관련된 것
+											|--- MVCConfig
+											|--- SecurityConfig
+											|--- MessageConfig
+											|--- FileUploadConfig
+											|--- /messages
+											|		|--- messages_ko.properties
+											|--- /properties
+													|--- multipart.properties

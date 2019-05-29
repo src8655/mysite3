@@ -101,6 +101,12 @@
 		    <version>2.9.8</version>
 		</dependency>
 		
+		<!-- parameter names module -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.module</groupId>
+		    <artifactId>jackson-module-parameter-names</artifactId>
+		    <version>2.9.8</version>
+		</dependency>
 		
 		<!-- Logback --> 
 		<dependency>                                    
@@ -140,6 +146,7 @@
 			<version>1.4</version>
 		</dependency>
 				
+
 
 
 	</dependencies>
