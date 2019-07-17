@@ -1,8 +1,12 @@
 package com.cafe24.mysite.vo;
 
+import javax.validation.constraints.Pattern;
+
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
+
+import com.cafe24.mysite.validator.ValidGender;
 
 public class UserVo {
 	private Long no;
@@ -12,7 +16,9 @@ public class UserVo {
 	@Email
 	@NotEmpty
 	private String email;
+	@Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$")
 	private String password;
+	@ValidGender
 	private String gender;
 	private String joinDate;
 	private String role;

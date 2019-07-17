@@ -62,7 +62,7 @@ public class BoardController {
 		return "board/list";
 	}
 	
-	@Auth
+	//@Auth
 	@RequestMapping(value="/write", method = RequestMethod.GET)
 	public String write(
 			@ModelAttribute("bpv") BoardparamVo bpv,
@@ -75,7 +75,7 @@ public class BoardController {
 		return "board/write";
 	}
 	
-	@Auth
+	//@Auth
 	@RequestMapping(value="/write", method = RequestMethod.POST)
 	public String write(
 			@ModelAttribute("bpv") BoardparamVo bpv,
@@ -116,7 +116,7 @@ public class BoardController {
 		return "board/view";
 	}
 
-	@Auth
+	//@Auth
 	@RequestMapping(value="/modify", method = RequestMethod.GET)
 	public String modify(
 			@ModelAttribute("bpv") BoardparamVo bpv,
@@ -135,7 +135,7 @@ public class BoardController {
 		return "board/modify";
 	}
 	
-	@Auth
+	//@Auth
 	@RequestMapping(value="/modify", method = RequestMethod.POST)
 	public String modify(
 			@ModelAttribute("bpv") BoardparamVo bpv,
@@ -155,7 +155,7 @@ public class BoardController {
 		return "redirect:/board/view?no="+boardVo.getNo() + "&pages="+bpv.getPages()+"&kwd="+bpv.getKwd_encode();
 	}
 	
-	@Auth
+	//@Auth
 	@RequestMapping("/delete")
 	public String delete(
 			@ModelAttribute("bpv") BoardparamVo bpv,
